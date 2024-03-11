@@ -2,7 +2,7 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 import './App.css';
 
-const socket = io.connect('http://localhost:5005');
+const socket = io.connect('https://testing-socket-backend.onrender.com');
 
 function App() {
   const [room, setRoom] = useState('');
