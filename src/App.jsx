@@ -1,8 +1,11 @@
 import { Fragment, useEffect, useRef, useState } from 'react';
+import { switchApiUrl } from '../baseUrl';
 import io from 'socket.io-client';
 import './App.css';
 
-const socket = io.connect('https://testing-socket-backend.onrender.com');
+const baseurl = switchApiUrl();
+
+const socket = io.connect(baseurl);
 
 function App() {
   const [room, setRoom] = useState('');
